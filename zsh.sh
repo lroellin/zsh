@@ -37,7 +37,7 @@ alias ls="command ls ${colorflag}"
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
 # View HTTP traffic
-alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias sniff="sudo ngrep -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 # Empty the Trash on all mounted volumes and the main HDD.
