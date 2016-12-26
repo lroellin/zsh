@@ -66,3 +66,5 @@ alias badge="tput bel"
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume output volume 100'"
+
+alias preview="open -a Preview $1"
