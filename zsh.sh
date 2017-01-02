@@ -14,7 +14,22 @@ esac
 ##
 
 maclookup () {
-  curl -s "https://macvendors.co/api/$1/pipe"
+  if [[ "$1" =~ '^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$' ]] then
+    firstbyte=`echo $1 | cut -c1-2`
+    echo $firstbyte
+    firstbyte="0x$firstbyte"
+    binary=$(( [#2] ans = ${firstbyte:-ans} ))
+    binary=` echo $binary | rev `
+    unimulticast=`echo $binary | cut -c 1`
+    globallocal=`echo $binary | cut -c 2`
+
+    echo $binary
+    echo $unimulticast
+    echo $globallocal
+    curl -s "https://macvendors.co/api/$1/pipe"
+  else
+    echo "$1 is not a MAC address"
+  fi
 }
 
 macvendor () {
