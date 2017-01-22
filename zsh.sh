@@ -83,3 +83,5 @@ alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume output volume 100'"
 
 alias preview="open -a Preview $1"
+
+alias printcode="enscript -r -2 --file-align=2 --highlight --line-numbers -o - `find . -name '*.java'` | ps2pdf - $1"
