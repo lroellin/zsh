@@ -70,4 +70,3 @@ alias pumpitup="osascript -e 'set volume output volume 100'"
 alias preview="open -a Preview $1"
 
 alias pjson='python -m json.tool'
-alias sync='openhsr-connect sync'
