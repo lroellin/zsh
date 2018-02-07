@@ -69,4 +69,6 @@ alias pumpitup="osascript -e 'set volume output volume 100'"
 
 alias preview="open -a Preview $1"
 
+alias noproxy='unset http_proxy HTTP_PROXY https_proxy HTTPS_PROXY'
+
 alias pjson='python -m json.tool'
