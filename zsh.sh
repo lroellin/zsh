@@ -1,7 +1,7 @@
 ## OS specific ##
 case "$(uname -s)" in
    Darwin) # Mac OS X
-     alias upgrade='antibody update && brew update && brew upgrade && brew cleanup && brew cask cleanup'
+     alias upgrade='antibody update && brew update && brew upgrade && brew cleanup'
      ;;
    Linux)
      ;;
