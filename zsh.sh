@@ -74,5 +74,5 @@ alias noproxy='unset http_proxy HTTP_PROXY https_proxy HTTPS_PROXY'
 alias pjson='python -m json.tool'
 
 pdfg () {
-  pdfgrep -Rni "$1" ./
+  pdfgrep -Rni --cache --warn-empty "$1" ./
 }
